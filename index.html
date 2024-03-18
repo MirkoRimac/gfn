@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming for NerdZ</title>
+    <link rel="icon" type="image/x-icon" href="/img/gfn-logo.png">
+    <link rel="stylesheet" href="style.css">
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-eN+qn1/2qOBUyjLMqY9l9zXX61KMuq8g/+5zURehCnlhWyMg/OjoGRYlPUk8kJM6v0xYU+qkpgAqkuuRf8gH6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <!-- Navigationsleiste -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html"><img src="./img/gfn-logo.png" style="height: 50px;" alt=""></a>
+    
+        <!-- Mobile Ansicht / Dropdown Menü -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navigationsleiste Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://app.asana.com/0/home/1206816080257901" target="_blank"><img src="./img/asana.png" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://drive.google.com/drive/folders/18TR9MDsOP8wgkzhvSeG_-b4gbGZYRUet?usp=sharing" target="_blank"><img src="./img/cloud.png" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://lernplattform.gfn.de/" target="_blank"><img src="./img/gfn.png" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="onenote:https://1drv.ms/o/s!AjpwrypdoKvnhZxbxkvPiMUWNSJUVw?e=V34eyc" target="_blank"><img src="./img/onenote.png" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="msteams:chat/19:63550836eaf6443b8d14a30063706fd4@thread.v2?ctx=chat" target="_blank"><img src="./img/teams.png" alt=""></a>
+                </li>
+    
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Weitere Links
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href=".urlaub.html">Urlaubsfotos</a>
+                        <a class="dropdown-item" href="https://gaming-for-nerdz.myspreadshop.de/" target="_blank">GFN Shop</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Dark/Night Mode Button -->
+            <ul class="navbar-nav ml-auto mr-1">
+                <li class="nav-item">
+                    <button id="darkModeButton" onclick="darkMode()" class="btn btn-outline-light">Dark Mode</button>
+                </li>
+            </ul>
+        
+            <!-- Suchleiste -->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Suche">
+                <button class="btn btn-success my-2 my-sm-0" type="submit">Suchen</button>
+            </form>
+        </div>
+    </nav>
+
+
+    <!-- Erster Container -->
+    <div class="container-fluid">
+        <img id="introImage" src="./img/NetworkSmurfs.png" class="img-fluid w-100" alt="">
+        <button id="fadeButton" class="btn btn-primary">Unser Team</button>
+    </div>
+
+    <div class="container-fluid text-center">
+        <h1>Gaming for NerdZ</h1>
+        <hr class="mode-sensitive-hr">
+        <h3 class="mb-4">Aktuell:</h3>
+    </div>
+
+    <!-- Google Suche -->
+    <div class="container-fluid text-center">
+        <img src="./img/google.png" alt="" class="img-fluid" id="google-container">
+    </div>
+    <script async src="https://cse.google.com/cse.js?cx=b0efac0699b504e90">
+    </script>
+    <div class="gcse-search" id="calendar-container"></div>
+
+    <!-- Google Kalendar -->
+    <div class="embed-responsive embed-responsive-16by9 mt-5" id="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=UTC&bgcolor=%23ffffff&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZGUuZ2VybWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZjRjZWZjOTgzMTJjNzFiNzY0NTNkM2IyNDU3ZmI2YzRkY2U4NDg0ZmU1MmJmNDgzZmNhOTBiOGUwZjFhMWQ2NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NjM4NzMzOGM0NTUwMjZjOTliNmQzMTk0MjdiNTU0ZWVjNjJhNjZhMzg2OGYzOTlmODk0N2EyZmRiNmI2ZjA5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NDUzM2U2NTU3YjJjYmY0YmYzNTQxMGM2Y2VkYmUzMzkwYmY5YTNkOTZlZDg1OGJhZGU3MWExNmJiNjFkZmVhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWZlZTU1OTYyYTRhNWU1ZGU4OWZiNjBiYzBmYmY5OWRkZDY0Zjg4MWI4NDZiNjFiZGRiODBiZjVlNGZlMjBjNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzMyZTA3Mzk2N2RlMGU5MjgxMDY5MTJjNjY0NjBhZjlmNDNmN2IzZDI5YmEyNTNkNDA1NTY0NTg0MGUyNmY1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YzNiYTA0Y2RkZDE5MzkxNDY5MjIxMWVkMTJlZWZmODFiMGYyMjBjYmY2NTllM2E0YTI3ZjY3MDBhOWE4YzA2NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OGIwNmVkNzYxNzE0NWRlYjdjMGEyNWM2NDBlZDVjZmI3NzVjODcwZTFmZjc2ODI3MWQ0NjY2NzRhNzM3ZTU3N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZGNmNTYxYWI5ZjU0OGJiYzUxMzRhNDc1MjY5ZDI1MTVhYjBjNDliMDM1ZDk2N2QwOTgzOWQzZTYzYjlkMzI5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZTlkZDNhZGNlZWE5N2I5OGNkMzhlNmE1MTIwODAzZjI3YmM3NmViYTJiNmQwY2MxODlhZGQwZTk5ZjA4YmMxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MzdkYzY0MzNiYzE0YTUyMzQ0MTA2ZmY4ZTFkMzZhOWNkYWU1NTI3MjhmN2Y3ODlhNDNiZWM0Mjg3NWM2MTQzM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Zjc0NjhmYjdmNDE1MzAwYWY5ODZiNmQ4ZjVhZTY5YWMyZGVjYTM3ZWY2OTYwN2NkZTIzZmFmNzg5MWJhODdkN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZDgwM2ZiMWVhMGI4MjI0OTMzOWZiNmFkZGM5MmZiMmE2ZWRmZjEwMzUwY2ZkYzA3MWI2ZDI4NWVkZDU5ZjEwNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2Y4NmVmNWJiY2MzMDdlNWQ4NTc2NzcxNjUyMWQ2OWEwNDI0ZmE0ZDllOTc0NThjZTEyMWE2NTBjNjQ4OTdjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MGI4OGE3ZmZhZWZjZjRhMWQyMGZjZDE5OWEwMjg1YjE2ZTU1ZDYyOWY2YWIwMmQzYWEyYTczNzA0N2NiNWZkMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWIyNDllOGI0YjljNTViNWEyZDNjNDdlYTVmZThlMTg0Nzg0ZjI2YWJmYTVlZmEzODcyMGQ0MWYyZWYxMDBmZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OWYwMjJlYTFlNmQ0NjY5YjE1MDI0ZTYyNTEyNWEyMWZlMGQxMTEzNzM1NTQ4ODllNTQ1ZTVjMWRjOWFlZWZmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=M2RmZThlOWZlMzAxZmI1ZjA5MTNlNDU1ZmY2MWJkOGEzY2I4ODQ3NGJiMmQ3N2M0NjAyZTJiZGIyZTI0ZGI3M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzZjMTQ5Zjg3YmIzYzI2YjQwMjViMmZiZWYwNDcyOWNkZTE5NzVkMGQ3YzdkYjg3ZDJkZGJlZTAxYjc4NTY3ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679&color=%230B8043&color=%23AD1457&color=%23E67C73&color=%23009688&color=%238E24AA&color=%23795548&color=%23A79B8E&color=%23B39DDB&color=%23F6BF26&color=%23B39DDB&color=%23B39DDB&color=%23F6BF26&color=%23B39DDB&color=%23D81B60&color=%23B39DDB&color=%23A79B8E&color=%23E67C73&color=%23009688&color=%23E67C73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+      
+
+    <!-- JavaScript Datei -->
+    <script src="script.js"></script>
+
+    <!-- 2/1206816080257895/1206856741358302:4923790fc636276b7f712515c40a92a3 -->
+
+</body>
+</html>
