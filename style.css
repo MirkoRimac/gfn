@@ -37,3 +37,7 @@ body {
 .ggl-container {
     margin-bottom: 20px;
 }
+
+li {
+    list-style: none;
+}
