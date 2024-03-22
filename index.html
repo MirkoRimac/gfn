@@ -3,142 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming for NerdZ</title>
-    <link rel="icon" type="image/x-icon" href="/img/gfn-logo.png">
-    <link rel="stylesheet" href="style.css">
+    <title>GFN | Startseite</title>
+    <link rel="icon" type?="image/x-icon" href="./img/gfn-logo.png">
+    <link rel="stylesheet" href="./style.css">
+
      <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-eN+qn1/2qOBUyjLMqY9l9zXX61KMuq8g/+5zURehCnlhWyMg/OjoGRYlPUk8kJM6v0xYU+qkpgAqkuuRf8gH6w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-    <!-- jQuery library -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
 </head>
 <body>
     <!-- Navigationsleiste -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <!-- Logo -->
-        <a class="navbar-brand" href="index.html"><img src="./img/gfn-logo.png" style="height: 50px;" alt=""></a>
-    
-        <!-- Mobile Ansicht / Dropdown Menü -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./img/gfn-logo.png" alt="Gaming for Nerds Logo" style="width: 40px"></a>
+          <li class="nav-item">
+            <button id="darkModeButton" onclick="darkMode()" class="btn btn-outline-light">Dark Mode</button>
+        </li>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <!-- Navigationsleiste Links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="https://app.asana.com/0/home/1206816080257901" target="_blank"><img src="./img/asana.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://drive.google.com/drive/folders/18TR9MDsOP8wgkzhvSeG_-b4gbGZYRUet?usp=sharing" target="_blank"><img src="./img/cloud.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img src="./img/gmail.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://lernplattform.gfn.de/" target="_blank"><img src="./img/gfn.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="onenote:https://1drv.ms/o/s!AjpwrypdoKvnhZxbxkvPiMUWNSJUVw?e=V34eyc" target="_blank"><img src="./img/onenote.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="msteams:chat/19:63550836eaf6443b8d14a30063706fd4@thread.v2?ctx=chat" target="_blank"><img src="./img/teams.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://web.telegram.org/" target="_blank"><img src="./img/telegram.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="whatsapp://open/" target="_blank"><img src="./img/whatsapp.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://chat.openai.com/" target="_blank"><img src="./img/chat-gpt.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="steam://openurl/" target="_blank"><img src="./img/steam.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.canva.com/" target="_blank"><img src="./img/canva.png" alt=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.photopea.com/" target="_blank"><img src="./img/photopea.png" alt=""></a>
-                </li>
-    
-                <!-- Dropdown -->
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+
+                <!-- Dropdown Link -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        Weitere Links
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="urlaub.html">Urlaubsfotos</a>
-                        <a class="dropdown-item" href="https://gaming-for-nerdz.myspreadshop.de/" target="_blank">GFN Shop</a>
-                    </div>
-                </li>
-            </ul>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Websites</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Asana</a></li>
+                      <li><a class="dropdown-item" href="#">ChatGPT</a></li>
+                      <li><a class="dropdown-item" href="#">GFN</a></li>
+                    </ul>
+                  </li>
+                  <!-- Dropdown Link Ende -->
 
-            <!-- Dark/Night Mode Button -->
-            <ul class="navbar-nav ml-auto mr-1">
-                <li class="nav-item">
-                    <button id="darkModeButton" onclick="darkMode()" class="btn btn-outline-light">Dark Mode</button>
-                </li>
+                  <!-- Dropdown Link -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Programme</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Asana</a></li>
+                      <li><a class="dropdown-item" href="#">Teams</a></li>
+                      <li><a class="dropdown-item" href="#">OneNote</a></li>
+                    </ul>
+                  </li>
+                  <!-- Dropdown Link Ende -->
+
+                  <!-- Dropdown Link -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Microsoft</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Excel</a></li>
+                      <li><a class="dropdown-item" href="#">Word</a></li>
+                      <li><a class="dropdown-item" href="#">PowerPoint</a></li>
+                    </ul>
+                  </li>
+                  <!-- Dropdown Link Ende -->
+
+                  <!-- Dropdown Link -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Chat</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Networksmurfs</a></li>
+                      <li><a class="dropdown-item" href="#">WhatsApp</a></li>
+                      <li><a class="dropdown-item" href="#">Telegram</a></li>
+                    </ul>
+                  </li>
+                  <!-- Dropdown Link Ende -->
+
+                  <!-- Dropdown Link -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cloud</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Google Drive</a></li>
+                    </ul>
+                  </li>
+                  <!-- Dropdown Link Ende -->
+
+                  <!-- Kalendar -->
+                  <li class="nav-item">
+                    <a href="./calendar.html" class="nav-link">Kalendar</a>
+                  </li>
+                  <!-- Kalendar Ende -->
+
             </ul>
-        
-            <!-- Suchleiste -->
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Suche">
-                <button class="btn btn-success my-2 my-sm-0" type="submit">Suchen</button>
-            </form>
+          </div>
         </div>
-    </nav>
+      </nav> 
+    <!-- Navigationsleiste Ende -->
 
-
-    <!-- Erster Container -->
+    <!-- Gaming for NerdZ Banner -->
     <div class="container-fluid">
-        <img id="introImage" src="./img/NetworkSmurfs.png" class="img-fluid w-100" alt="">
-        <button id="fadeButton" class="btn btn-primary">Unser Team</button>
-    </div>
+      <img id="introImage" src="./img/NetworkSmurfs.png" class="img-fluid w-100" alt="">
+      <button id="fadeButton" class="btn btn-primary">Unser Team</button>
+  </div>
 
     <div class="container-fluid text-center">
         <h1>Gaming for NerdZ</h1>
-        <hr class="mode-sensitive-hr">
+    </div>
+    <hr>
+
+    <!-- Gaming for NerdZ Banner Ende -->
+
+    <!-- Haupt-Container -->
+
+    <div class="container-fluid">
+        <!-- 1. Reihe -->
+        <div class="row">
+            <!-- 1. Spalte -->
+            <div class="col-sm-4">
+                
+            </div>
+            <!-- 1. Spalte Ende -->
+
+            <!-- 2. Spalte -->
+            <div class="col-sm-4">
+                <!-- Google Suchleiste -->
+                <div class="container-fluid text-center mt-5" style="max-width: 400px;">
+                    <img src="./img/google.png" alt="" class="img-fluid embed-responsive embed-responsive-16by9"" id="google-container">
+                </div>
+                <!-- Google Suchleiste Ende -->
+                <script async src="https://cse.google.com/cse.js?cx=b0efac0699b504e90">
+                </script>
+                <div class="gcse-search" id="calendar-container"></div>
+            </div>
+            <!-- 2. Spalte Ende -->
+
+            <!-- 3. Spalte -->
+            <div class="col-sm-4 text-center">
+                <!-- Tägliches Zitat -->
+
+                <b>Tägliches Zitat:</b>
+
+                <figure class="quote container-fluid">
+                <blockquote>
+                    Ich hab da mal was in die Notes eingefügt...
+                </blockquote>
+                <figcaption>
+                    &mdash; Tobias Tobsen Graf, <cite>Freier Denker</cite>  </figcaption>
+                </figure>
+
+                <!-- Tägliches Zitat Ende -->
+            </div>
+            <!-- 1. Spalte Ende -->
+        </div>
+        <!-- 1. Reihe Ende -->
     </div>
 
-    <!-- Google Suche -->
+    <!-- Haupt-Container Ende -->
+
+    <!-- Zweiter Haupt-Content -->
+
     <div class="container-fluid text-center mt-5">
-        <img src="./img/google.png" alt="" class="img-fluid embed-responsive embed-responsive-16by9" id="google-container">
+        <!-- 1 Reihe -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto"><a href="https://app.asana.com/0/home/1206816080257901" target="_blank"><img class="app-symbol" src="./img/asana.png" alt=""></a></div>
+            <div class="col-auto"><a href="https://drive.google.com/drive/folders/18TR9MDsOP8wgkzhvSeG_-b4gbGZYRUet?usp=sharing" target="_blank"><img class="app-symbol" src="./img/cloud.png" alt=""></a></div>
+            <div class="col-auto"><a href="https://lernplattform.gfn.de/" target="_blank"><img class="app-symbol" src="./img/gfn.png" alt=""></a></div>
+            <div class="col-auto"><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img class="app-symbol" src="./img/gmail.png" alt=""></a></div>
+        </div>       
+                        
+        <!-- 1 Reihe Ende -->
+
+        <!-- 2 Reihe -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto"><a href="onenote:https://1drv.ms/o/s!AjpwrypdoKvnhZxbxkvPiMUWNSJUVw?e=V34eyc"><img class="app-symbol" src="./img/onenote.png" alt=""></a></div>
+            <div class="col-auto"><a href="msteams:chat/19:63550836eaf6443b8d14a30063706fd4@thread.v2?ctx=chat"><img class="app-symbol" src="./img/teams.png" alt=""></a></div>
+            <div class="col-auto"><a href="whatsapp://open/"><img class="app-symbol" src="./img/whatsapp.png" alt=""></a></div>
+            <div class="col-auto"><a href="https://web.telegram.org/" target="_blank"><img class="app-symbol" src="./img/telegram.png" alt=""></a></div>
+        </div> 
+        <!-- 2 Reihe Ende -->
+
+        <!-- 3 Reihe -->
+        <div class="row justify-content-center mb-3">
+            <div class="col-auto"><a href="https://chat.openai.com/" target="_blank"><img class="app-symbol" src="./img/chat-gpt.png" alt=""></a></div>
+            <div class="col-auto"><a href="https://www.canva.com/" target="_blank"><img class="app-symbol" src="./img/canva.png" alt=""></a></div>
+            <div class="col-auto"><a href="https://www.photopea.com/" target="_blank"><img class="app-symbol" src="./img/photopea.png" alt=""></a></div>
+            <div class="col-auto"><a href="#"><img class="app-symbol" src="./img/steam.png" alt="" onClick="showAlert()"></a></div>
+        </div>
+        <!-- 3 Reihe Ende -->
     </div>
-    <script async src="https://cse.google.com/cse.js?cx=b0efac0699b504e90">
-    </script>
-    <div class="gcse-search" id="calendar-container"></div>
 
-    <!-- Wichtige Änderungen -->
-    <div class="container-fluid text-center mt-5">
-        <ul>
-            <h1>Wichtige Änderungen:</h1>
-            <li>Alle Verfügbaren digitalen Schulbücher, wurden zur Google Drive Cloud hinzugefügt und können heruntergeladen werden.</li>
-        </ul>
-    </div>
-
-
-    <!-- Google Kalendar -->
-    <div class="embed-responsive embed-responsive-16by9 mt-5" id="calendar-container">
-        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=UTC&bgcolor=%23ffffff&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZGUuZ2VybWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZjRjZWZjOTgzMTJjNzFiNzY0NTNkM2IyNDU3ZmI2YzRkY2U4NDg0ZmU1MmJmNDgzZmNhOTBiOGUwZjFhMWQ2NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NjM4NzMzOGM0NTUwMjZjOTliNmQzMTk0MjdiNTU0ZWVjNjJhNjZhMzg2OGYzOTlmODk0N2EyZmRiNmI2ZjA5YkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NDUzM2U2NTU3YjJjYmY0YmYzNTQxMGM2Y2VkYmUzMzkwYmY5YTNkOTZlZDg1OGJhZGU3MWExNmJiNjFkZmVhMEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWZlZTU1OTYyYTRhNWU1ZGU4OWZiNjBiYzBmYmY5OWRkZDY0Zjg4MWI4NDZiNjFiZGRiODBiZjVlNGZlMjBjNUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzMyZTA3Mzk2N2RlMGU5MjgxMDY5MTJjNjY0NjBhZjlmNDNmN2IzZDI5YmEyNTNkNDA1NTY0NTg0MGUyNmY1NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YzNiYTA0Y2RkZDE5MzkxNDY5MjIxMWVkMTJlZWZmODFiMGYyMjBjYmY2NTllM2E0YTI3ZjY3MDBhOWE4YzA2NEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OGIwNmVkNzYxNzE0NWRlYjdjMGEyNWM2NDBlZDVjZmI3NzVjODcwZTFmZjc2ODI3MWQ0NjY2NzRhNzM3ZTU3N0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZGNmNTYxYWI5ZjU0OGJiYzUxMzRhNDc1MjY5ZDI1MTVhYjBjNDliMDM1ZDk2N2QwOTgzOWQzZTYzYjlkMzI5NUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZTlkZDNhZGNlZWE5N2I5OGNkMzhlNmE1MTIwODAzZjI3YmM3NmViYTJiNmQwY2MxODlhZGQwZTk5ZjA4YmMxOEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MzdkYzY0MzNiYzE0YTUyMzQ0MTA2ZmY4ZTFkMzZhOWNkYWU1NTI3MjhmN2Y3ODlhNDNiZWM0Mjg3NWM2MTQzM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Zjc0NjhmYjdmNDE1MzAwYWY5ODZiNmQ4ZjVhZTY5YWMyZGVjYTM3ZWY2OTYwN2NkZTIzZmFmNzg5MWJhODdkN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZDgwM2ZiMWVhMGI4MjI0OTMzOWZiNmFkZGM5MmZiMmE2ZWRmZjEwMzUwY2ZkYzA3MWI2ZDI4NWVkZDU5ZjEwNkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=Y2Y4NmVmNWJiY2MzMDdlNWQ4NTc2NzcxNjUyMWQ2OWEwNDI0ZmE0ZDllOTc0NThjZTEyMWE2NTBjNjQ4OTdjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=MGI4OGE3ZmZhZWZjZjRhMWQyMGZjZDE5OWEwMjg1YjE2ZTU1ZDYyOWY2YWIwMmQzYWEyYTczNzA0N2NiNWZkMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=YWIyNDllOGI0YjljNTViNWEyZDNjNDdlYTVmZThlMTg0Nzg0ZjI2YWJmYTVlZmEzODcyMGQ0MWYyZWYxMDBmZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=OWYwMjJlYTFlNmQ0NjY5YjE1MDI0ZTYyNTEyNWEyMWZlMGQxMTEzNzM1NTQ4ODllNTQ1ZTVjMWRjOWFlZWZmY0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=M2RmZThlOWZlMzAxZmI1ZjA5MTNlNDU1ZmY2MWJkOGEzY2I4ODQ3NGJiMmQ3N2M0NjAyZTJiZGIyZTI0ZGI3M0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=NzZjMTQ5Zjg3YmIzYzI2YjQwMjViMmZiZWYwNDcyOWNkZTE5NzVkMGQ3YzdkYjg3ZDJkZGJlZTAxYjc4NTY3ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%2333B679&color=%230B8043&color=%23AD1457&color=%23E67C73&color=%23009688&color=%238E24AA&color=%23795548&color=%23A79B8E&color=%23B39DDB&color=%23F6BF26&color=%23B39DDB&color=%23B39DDB&color=%23F6BF26&color=%23B39DDB&color=%23D81B60&color=%23B39DDB&color=%23A79B8E&color=%23E67C73&color=%23009688&color=%23E67C73" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </div>
-      
-
-    <!-- JavaScript Datei -->
+    <!-- Zweiter Haupt-Content Ende -->
+    
     <script src="script.js"></script>
-
-    <!-- 2/1206816080257895/1206856741358302:4923790fc636276b7f712515c40a92a3 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 </html>

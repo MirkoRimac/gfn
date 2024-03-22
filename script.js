@@ -59,101 +59,29 @@ function applyDarkModePreference() {
 // Call applyDarkModePreference function when the page loads
 window.onload = applyDarkModePreference;
 
-$(document).ready(function(){
-    var isFadedOut = false; // Variable to track if the image is currently faded out
+// GOTCHA
+function showAlert() {
+    alert('HA! ERWISCHT! Zurück an die Arbeit, sonst schwingt Tobsen die Peitsche!');
+}
 
-    // Function to fade out the image
-    function fadeOutImage() {
-        $("#introImage").fadeOut();
-        isFadedOut = true; // Update the state of the image
-    }
+// Team Bild
+document.addEventListener("DOMContentLoaded", function() {
+    // Get reference to the image
+    var introImage = document.getElementById("introImage");
 
-    // Function to fade in the image
-    function fadeInImage() {
-        $("#introImage").fadeIn();
-        isFadedOut = false; // Update the state of the image
-    }
-
-    // Initial fade out after 3 seconds
-    setTimeout(fadeOutImage, 1000);
+    // Function to fade out the image after 1 second when the page loads
+    setTimeout(function(){
+        introImage.style.display = "none";
+    }, 1000);
 
     // Click event handler for the button
-    $("#fadeButton").click(function(){
-        // Cancel any pending fade out action
-        clearTimeout(timeoutID);
+    document.getElementById("fadeButton").addEventListener("click", function() {
+        // Show the image when the button is clicked
+        introImage.style.display = "block";
 
-        // Toggle fading in and fading out based on the current state of the image
-        if (isFadedOut) {
-            fadeInImage();
-        } else {
-            fadeOutImage();
-        }
-
-        // Set up the automatic fade out after 3 seconds if the image is not currently faded out
-        if (!isFadedOut) {
-            timeoutID = setTimeout(fadeOutImage, 3000);
-        }
+        // Fade out the image after 3 seconds
+        setTimeout(function(){
+            introImage.style.display = "none";
+        }, 3000);
     });
-
-    var timeoutID; // Variable to hold the timeout ID
-});
-
-// ASANA
-
-const express = require('express');
-const axios = require('axios');
-const querystring = require('querystring');
-
-const app = express();
-
-const clientId = '1206856740786938';
-const clientSecret = '51ff4469658c2d9a504eb84deed07b3c';
-const redirectUri = 'https://app.asana.com/0/home/1206816080257901'; // Update this with your actual redirect URI
-
-// Step 1: Redirect users to Asana for authorization
-app.get('/auth/asana', (req, res) => {
-    const asanaAuthUrl = `https://app.asana.com/-/oauth_authorize?client_id=${clientId}&response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}`;
-    res.redirect(asanaAuthUrl);
-});
-
-// Step 2: Handle Asana callback
-app.get('/auth/asana/callback', async (req, res) => {
-    const { code } = req.query;
-
-    try {
-        // Step 3: Exchange authorization code for access token
-        const response = await axios.post('https://app.asana.com/-/oauth_token', querystring.stringify({
-            grant_type: 'authorization_code',
-            client_id: clientId,
-            client_secret: clientSecret,
-            redirect_uri: redirectUri,
-            code: code
-        }), {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            }
-        });
-
-        const accessToken = response.data.access_token;
-
-        // Step 4: Use access token to make requests to Asana API
-        const tasksResponse = await axios.get('https://app.asana.com/api/1.0/tasks', {
-            headers: {
-                'Authorization': `Bearer ${accessToken}`
-            }
-        });
-
-        const tasks = tasksResponse.data.data;
-
-        // Display tasks in the browser
-        res.send(tasks);
-    } catch (error) {
-        console.error('Error:', error.response.data);
-        res.status(500).send('An error occurred');
-    }
-});
-
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
 });

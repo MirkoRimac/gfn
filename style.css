@@ -8,6 +8,20 @@ body {
     color: white;
 }
 
+.container-fluid {
+    position: relative;
+}
+
+.btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.dark-mode blockquote, figcaption {
+    color: black;
+}
+
 /* Light mode styles for hr */
 .light-mode hr {
     border-color: #343A40;
@@ -24,20 +38,55 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow */
 }
 
-#calendar-container {
-    max-width: 1800px; /* Adjust the max-width to your desired size */
-    margin: 0 auto; /* Center the calendar container */
-}
-
-#google-container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.ggl-container {
-    margin-bottom: 20px;
-}
-
 li {
     list-style: none;
 }
+
+/* Zitat */
+
+.quote {
+    margin: 0;
+    background: #eee;
+    padding: 1em;
+    border-radius: 1em;
+    max-width: 500px;
+  }
+  .quote figcaption,
+  .quote blockquote {
+    margin: 1em;
+  }
+
+/* Google Calendar */
+@media (max-width: 550px) {
+    .big-container {
+        display: none;
+    }
+ }
+ @media (min-width: 550px) {
+    .small-container {
+        display: none;
+    }
+ }
+ /* Responsive iFrame */
+ .responsive-iframe-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+ }
+ .responsive-iframe-container iframe,   
+ .vresponsive-iframe-container object,  
+ .vresponsive-iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ }
+
+ /* App Symbol Kasten */
+ .app-symbol:hover {
+    transform: scale(1.1) !important;
+    cursor: pointer;
+ }
