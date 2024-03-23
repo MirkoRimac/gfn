@@ -61,7 +61,14 @@ window.onload = applyDarkModePreference;
 
 // GOTCHA
 function showAlert() {
-    alert('HA! ERWISCHT! Zurück an die Arbeit, sonst schwingt Tobsen die Peitsche!');
+    // Hell-Tobsen anzeigen
+    var hellTobsen = document.querySelector(".hell-tobsen");
+    hellTobsen.style.display = "block";
+
+    //Timeout
+    setTimeout(function() {
+        hellTobsen.style.display = "none";
+    }, 3000)
 }
 
 // Team Bild
