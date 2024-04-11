@@ -1,0 +1,19 @@
+body {
+    background-color: #f7e0a1;
+}
+
+.app-symbol:hover {
+    transform: scale(1.2);
+}
+
+.app-symbol:active {
+    transform: scale(0.8);
+}
+
+.hell-tobsen {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 9999; /* Ensure it's above other elements */
+}
